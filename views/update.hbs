@@ -1,0 +1,23 @@
+<div class="container w-50">
+  <h1>Edit Products</h1>
+  {{#if UpdateError}}
+<div class="alert alert-primary" role="alert">{{UpdateError}}</div>
+{{/if}}
+  <form action='/update-product/{{Editproduct._id}}' method="post" >
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="title" id="floatingInput" placeholder="Product name" value="{{Editproduct.title}}">
+      <label for="floatingInput">Flower name</label>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Description" name="description"  id="floatingTextarea2" 
+        style="height: 100px">{{Editproduct.description}}</textarea>
+      <label for="floatingTextarea2">Description</label>
+    </div>    
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">№</span>
+      <input type="number" class="form-control" placeholder="Count of flowers" name="number" value="{{Editproduct.number}}" aria-label="count"
+        aria-describedby="addon-wrapping">
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+  </form>
+</div>

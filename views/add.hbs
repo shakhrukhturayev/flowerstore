@@ -1,0 +1,27 @@
+<div class="container w-50">
+  <h1>Add product</h1>
+  {{#if isProductError}}
+  <div class="alert alert-danger" role="alert">{{isProductError}}</div>
+  {{/if}}
+  <form action="/add-product" method="post">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="title" id="floatingInput" placeholder="Product name">
+      <label for="floatingInput">Flower name</label>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Description" name="description" id="floatingTextarea2"
+        style="height: 100px"></textarea>
+      <label for="floatingTextarea2">Description</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="image" id="floatingInput" placeholder="link photo">
+      <label for="floatingInput">Image</label>
+    </div>
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">№</span>
+      <input type="number" class="form-control" placeholder="Count of flowers" name="number" aria-label="count"
+        aria-describedby="addon-wrapping">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>

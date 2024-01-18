@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+  <title>{{title}}</title>
+</head>
+<body> 
+<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img
+        src="https://images.vexels.com/media/users/3/156809/isolated/lists/ffa01a3f7ab1ae183d8820fe7c09fe04-lotus-flower-logo-symbol.png"
+        alt="Bootstrap" width="80" height="74">
+    </a>
+    {{!-- ul --}}
+    <ul class="nav justify-content-end gap-2">
+      <li class="nav-item">
+        <a class="nav-link active" href="/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/add">Add</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/order">Order</a>
+      </li>
+     
+    {{!--  {{#if adminAvatar}}
+     {{# each adminAvatar}}
+      <li class="nav-item mb-1" style="outline: 1px red solid; width: 50px; height: 50px; border-radius: 100px;">
+        <a class="nav-link " href="/dashboard">{{GetFirstLetter user.firstname user.lastname}}</a>
+      </li>
+      {{/each}}
+      {{/if}} --}}
+      
+      {{#if token}}
+     <a href="/logout"><button type="button" class="btn btn-danger mt-1">Logout</button></a>
+      {{else}}
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="/registr"><button type="button" class="btn btn-primary">Register</button></a>
+        <a href="/login"><button type="button" class="btn btn-secondary">Login</button></a>
+      </div>
+      {{/if}}
+    </ul>
+  </div>
+</nav>

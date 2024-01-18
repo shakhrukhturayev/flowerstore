@@ -1,0 +1,38 @@
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col-md-8">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                
+                <h2 class="mb-0">{{aboutProduct.title}}</h2>
+                
+                <p class="card-text mb-auto mt-2">{{aboutProduct.description}}</p>
+               <div class="mb-1 text-body-secondary">{{formatDate aboutProduct.createdAt}}</div>
+            </div>
+            <div class="col-auto d-none d-lg-block w-50" style="height: 400px;">
+                <img class="" src="{{aboutProduct.image}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center align-items-center mb-5">
+    <div class="row col-md-6">
+    <form action="/add-comment/{{id}}" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="mb-3">
+    <label for="comment" class="form-label"> Add comment</label>
+    <textarea class="form-control" name="comment" id="comment"  rows="2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-info">Add a comment </button>
+    </form>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center mb-4">
+<div class="card col-md-7">
+  <div class="card-header">
+    email Plase
+  </div>
+  <div class="card-body">
+   <p> A well-known quote, contained in blockquoteccxcxcxcxcxcx element for comment</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="w-50 mx-auto">
+<p class="fs-1">Registr</p>
+{{#if registrError}}
+<div class="alert alert-primary" role="alert">{{registrError}}</div>
+{{/if}}
+<form action="/registr" method="post">
+<div class="d-flex gap-3">
+   <div class="form-floating mb-3 w-50">
+    <input type="text" class="form-control" name="firstname" id="floatingInput" placeholder="Olivira">
+    <label for="floatingInput">First Name</label>
+ </div>
+   <div class="form-floating mb-3 w-50">
+    <input type="text" class="form-control" name="lastname" id="floatingInput" placeholder="Rdriguis">
+    <label for="floatingInput">Last name</label>
+ </div>
+</div>
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Email address</label>
+ </div>
+   <div class="form-floating mb-3">
+    <input type="password" class="form-control" name="password" id="floatingInput" placeholder="123456">
+    <label for="floatingInput">Password</label>
+ </div>
+ <button type="submit" class="btn btn-primary"> SUBMIT</button>
+</form> 
+</div>
+   
